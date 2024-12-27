@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[left=1.50cm, right=2.50cm, top=2.00cm, bottom=1.00cm]{geometry}
+\setlength{\columnsep}{2cm}
+\begin{document}
+
+\begin{multicols}{2}
+	\section{Introduction}
+
+	This is an introductionhjgda section with some bullet points:
+
+	\begin{itemize}
+		\item This is the \large\textbf{firxzxzst} bullet point.
+		\item This is the second bullet point.
+		\item This is the third bullet point.
+	\end{itemize}
+	Now, here are some numbered points:
+	\begin{enumerate}
+		\item This is the first numbered point ok.
+		\item This is the seconeed numbered point.
+		\item This is the third numbered point.
+	\end{enumerate}
+	You can also nest the environments to create more complex lists:
+	\begin{enumerate}
+		\item This is the first numbered point.
+		      \begin{itemize}
+			      \item This is a bullet point under the first numbered point.
+			      \item This is another bullet point under the first numbered point.
+		      \end{itemize}
+		\item This is the second numbered point.
+		      \begin{enumerate}
+			      \item This is the first sub-numbered point under the second numbered point.
+			      \item This is the second sub-numbered point under the second numbered point.
+		      \end{enumerate}
+		\item This is the third numbereahdad point.
+	\end{enumerate}
+	% Your content goes here
+	\section{Introduction}
+	This is the introduction section.
+
+	\section{Equations}
+	Here are some equations:
+
+	\begin{equation}
+		E = mc^2
+	\end{equation}
+	\begin{align}
+		F & = ma          \\
+		v & = \frac{d}{t}
+	\end{align}
+
+	\section{Figures}
+	\begin{figure}[h]
+		\centering
+		%\includegics[width=0.8\linewidth]{example-image.png}
+		\caption{An example figure.}
+		\label{fig:example}
+	\end{figure}
+
+\end{multicols}
+
+\end{document}
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+\begin{document}
+
+\begin{multicols}{2}
+
+	% Your content goes here
+	\section{Introduction}
+	This is the introduction section.
+
+	\section{Equations}
+	Here are some equations:
+
+	\begin{equation}
+		E = mc^2
+	\end{equation}
+
+	\begin{align}
+		F & = ma          \\
+		v & = \frac{d}{t}
+	\end{align}
+
+	\section{Figures}
+	\begin{figure}[h]
+		\centering
+		\includegics[width=0.8\linewidth]{example-image.png}
+		\caption{An example figure.}
+		\label{fig:example}
+	\end{figure}
+
+\end{multicols}
+
+\end{document}

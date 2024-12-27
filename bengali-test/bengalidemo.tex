@@ -1,0 +1,79 @@
+\documentclass{exam}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{polyglossia}
+\usepackage{fontspec}
+% \usepackage[utf8]{inputenc}
+\setdefaultlanguage{bengali}  % Set the default language to Bengali
+% Define Bengali font (Noto Sans Bengali)
+\newfontfamily\bengalifont{Kalpurush}
+
+\title{
+	\centering উদাহরণ প্রশ্নপত্র 
+}
+
+
+% Define the Bengali numeral conversion
+\newcommand{\numtobng}[1]{%
+	\ifcase#1 \or ১\or ২\or ৩\or ৪\or ৫\or ৬\or ৭\or ৮\or ৯\or ১০
+	\or ১১\or ১২\or ১৩\or ১৪\or ১৫\or ১৬\or ১৭\or ১৮\or ১৯\or ২০
+	\else \arabic{#1}\fi
+}
+
+% Define the numbers to bangla letters 
+
+% Define the question command with Bengali numerals
+\newcounter{questioncounter} % Create a new counter for questions
+\newcommand{\myquestion}[2]{%
+	\refstepcounter{questioncounter}
+	% \textbf{\\প্রশ্ন \numtobng{\value{questioncounter}}:} #1 
+	\noindent \textbf{প্রশ্ন \numtobng{\value{questioncounter}}:} 
+    \hangindent=2.8em % Indent the second line and beyond by 2em
+    \hangafter=1 % Apply indentation after the first line
+	\parbox[t]{0.9\textwidth}{#1}
+    % #1  
+	\hfill {\textbf{(#2)}} \\
+	%\hfill \parbox[t]{2cm}{\raggedleft \textbf{#2}} 
+	%\hfill \reversemarginpar \marginpar{\textbf{#2}}
+	% \linebreak \vspace{-1em} 
+}
+
+% New command for MCQs
+\newcommand{\mcq}[4]{ 
+	% \vspace{-1.1em}       % Define the new MCQ command
+	\begin{multicols}{2}
+		\begin{itemize}[left=3.5em, label=, itemsep=0pt, topsep=0pt, parsep=0pt, partopsep=0pt] 
+			\item (ক) #1 % Option 1
+			\item (খ) #2 % Option 2
+			\item (গ) #3 % Option 3
+			\item (ঘ) #4 % Option 4
+		\end{itemize}
+	\end{multicols}
+	% \vspace{-1.8em}
+}
+
+\setlength{\columnsep}{-0.7in}
+
+\begin{document}
+\maketitle
+
+% Example with Bengali and English mixed content
+\hrule
+% \noindent
+\myquestion{এই প্রশ্নটি কি আপনার পছন্দ?}{4}
+
+\myquestion{আপনার নাম কি?}{6}
+
+\myquestion{এই বইটি কি আপনি পড়েছেন?}{6}
+
+\myquestion{এটি বাংলায় লেখা পরবর্তী প্রশ্ন প্রশ্নটি হচ্ছে সোডিয়াম নাইট্রেট এর সঙ্কেত কি	? তার ফর্মুলা টি লেখ। এটির সাথে জল মেশালে কি হবে? }{2\raggedcolumns }
+\mcq{Earth's largest country}{Total 20 countries}{Bangladesh}{park}
+
+\myquestion{ঢাকা কোথায় অবস্থিত?}{5} \mcq{Bangladesh}{India}{Pakistan}{Australia}
+
+\myquestion{this is another question?}{8}
+\\
+
+
+
+\end{document}
