@@ -1,3 +1,17 @@
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.lof
+*.lot
+*.out
+*.toc
+*.ilg
+*.ind
+*.glo
+*.glx
+*.idx
 .fdb_latexmk
 .asy
 .pre
@@ -5,3 +19,8 @@
 .gz
 .log
 .xvd
+
+# Editor-specific files
+*~
+*.bak
+*.tmp
